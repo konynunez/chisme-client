@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chisme Social Media
 
-## Getting Started
+Chisme Social is a social media platform designed to allow users to engage in gossip (chismes), interact with posts, read news, and leave comments. Built using modern web technologies including Next.js, React Query, Supabase, and Axios.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Post gossip (Chisme) and read latest posts.
+- Fetch and display celebrity news via News API.
+- User comments and interactions with posts.
+- Supabase integration for handling the backend (database, authentication, etc.).
+- Styled with TailwindCSS using a Rose color palette.
+- Tech Stack
+- Frontend: Next.js, React, TailwindCSS, React Query.
+- Backend: Node.js, Express, Supabase, Axios.
+- API: NewsAPI.
+- Database: Postgres via Supabase.
+- Setup Instructions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Prerequisites
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Ensure you have the following installed:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js (v14 or higher)
+- NPM (v6 or higher)
+- Supabase account
+- NewsAPI account (for the news API key)
 
-## Learn More
+### 1. Clone the repository
 
-To learn more about Next.js, take a look at the following resources:
+git clone https://github.com/konynunez/chisme-client.git
+cd chisme-social-media
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Install Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+npm install
 
-## Deploy on Vercel
+npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## vercel deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://vercel.com/konys-projects-c9c93c6d/chisme-client
+
+### License
+
+MIT
