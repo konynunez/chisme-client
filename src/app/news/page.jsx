@@ -11,6 +11,7 @@ const fetchNews = async () => {
     const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/news/celebrity`);
     return data;  
   } catch (error) {
+    console.error('Error fetching news articles:', error.response ? error.response.data : error.message); // Log detailed error
     throw new Error('Error fetching news articles');  
   }
 };
@@ -18,7 +19,7 @@ const fetchNews = async () => {
 // Component definition
 export default function NewsPage() {
   // React Query hook to fetch data
-  const { data: news, isLoading, isError } = useQuery({
+  const { data: news, isLoading, isError, error } = useQuery({
     queryKey: ["news"],  
     queryFn: fetchNews,  
   });
@@ -30,7 +31,7 @@ export default function NewsPage() {
 
   // Error state
   if (isError) {
-    return <div className="text-center text-red-500">Error loading news</div>;
+    return <div className="text-center text-red-500">{error.message}</div>; // Display the error message
   }
 
   // Handle no news articles
